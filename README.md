@@ -1,6 +1,7 @@
 <h1> food-trend-prediction </h1>
 <p align="left">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=Python&logoColor=white"/></a>&nbsp 
+  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=Python&logoColor=white"/></a>&nbsp
+  <img src="https://img.shields.io/badge/Tableau-E97627?style=flat-square&logo=Tableau&logoColor=white"/></a>
 </p>
 <b><i>Food trend prediction</i></b> shows the current trend and predicts future trend based on LSTM model. Term <b>'trend'</b> is defined and quantified as 3 aspects: long-term, short-term and persistence. <i>Long-term</i> condition is satisfied when the interest increased when compared to the interest level of the previous year. <i>Short-term</i> condition is met when the interest increased for the past 2 weeks. Lastly, <i>persistence</i> condition is satisfied when the upward trend continues within the target period (1 week). If all 3 conditions are met, we call the term is a <b>'trend'</b> term. <br>
 <br>
