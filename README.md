@@ -4,7 +4,8 @@
 </p>
 <b><i>Food trend prediction</i></b> shows the current trend and predicts future trend based on LSTM model. Term <b>'trend'</b> is defined and quantified as 3 aspects: long-term, short-term and persistence. <i>Long-term</i> condition is satisfied when the interest increased when compared to the interest level of the previous year. <i>Short-term</i> condition is met when the interest increased for the past 2 weeks. Lastly, <i>persistence</i> condition is satisfied when the upward trend continues within the target period (1 week). If all 3 conditions are met, we call the term is a <b>'trend'</b> term. <br>
 <br>
-To understand the current trend, we employed a powerful time-series technique <b>STL</b> (Seasonal and Trend decomposition using Loess) and <b>MA</b> (Moving Average). To predict the future trend, we used <b>LSTM</b> (Long-Short Term Memory).
+To understand the current trend, we employed a powerful time-series technique <b>STL</b> (Seasonal and Trend decomposition using Loess) and <b>MA</b> (Moving Average). <br>
+To predict the future trend, we used <b>LSTM</b> (Long-Short Term Memory).
 
 
 <h2> major Contributions </h2>
@@ -19,14 +20,14 @@ To understand the current trend, we employed a powerful time-series technique <b
 <h2> Directory </h2>
 
 ### _algorithms_
-- **collector**: KLUE(고려대학교 강의평가 사이트)에서 강의평, 학점/학습량/난이도/성취감 4개 지표 데이터 크롤링
-- **config**: KLUE(고려대학교 강의평가 사이트)에서 강의평, 학점/학습량/난이도/성취감 4개 지표 데이터 크롤링
-- **daily_update**: KLUE(고려대학교 강의평가 사이트)에서 강의평, 학점/학습량/난이도/성취감 4개 지표 데이터 크롤링
-- **initial**: KLUE(고려대학교 강의평가 사이트)에서 강의평, 학점/학습량/난이도/성취감 4개 지표 데이터 크롤링
-- **lstm**: KLUE(고려대학교 강의평가 사이트)에서 강의평, 학점/학습량/난이도/성취감 4개 지표 데이터 크롤링
-- **lstm_predictor**: KLUE(고려대학교 강의평가 사이트)에서 강의평, 학점/학습량/난이도/성취감 4개 지표 데이터 크롤링
-- **stl**: KLUE(고려대학교 강의평가 사이트)에서 강의평, 학점/학습량/난이도/성취감 4개 지표 데이터 크롤링
-- **utils**: KLUE(고려대학교 강의평가 사이트)에서 강의평, 학점/학습량/난이도/성취감 4개 지표 데이터 크롤링
+- **collector**: 네이버 데이터랩에서 입력값 (조회기간/성별/연령대/1,2,3차 카테고리)에 따라 트렌드지수 데이터 크롤링
+- **config**: 네이버 API 접근코드와 카테고리명 지정
+- **daily_update**: 매일 크롤링한 트렌드지수 데이터로 LSTM 예측기 업데이트
+- **initial**: 초기 트렌드지수 데이터로 LSTM 예측기 초기화/학습
+- **lstm**: LSTM에 유의미한 변수조합으로 모델 학습
+- **lstm_predictor**: 학습한 LSTM으로 미래 트렌드 예측
+- **stl**: Moving Average로 계절성 제거한 현재 트렌드 파악
+- **utils**: 데이터 전처리 단에서 필요한 함수 정의
 
 
 ### _data_
@@ -34,4 +35,4 @@ To understand the current trend, we employed a powerful time-series technique <b
 - DATALAB_트렌드지수_20대여성_20210815.csv
 - DATALAB_트렌드지수_30대남성_20210815.csv
 - DATALAB_트렌드지수_30대여성_20210815.csv
-- NAVER_카테고리목록_식품_210708: NAVER에서 21.07/08에 제공하는 카테고리목록
+- NAVER_카테고리목록_식품_210708: NAVER에서 21.07.08 기준 네이버 검색어트렌드 카테고리목록
