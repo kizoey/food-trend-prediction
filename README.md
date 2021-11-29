@@ -3,6 +3,7 @@
   <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=Python&logoColor=white"/></a>&nbsp 
 </p>
 <b><i>Food trend prediction</i></b> shows the current trend and predicts future trend based on LSTM model. Term <b>'trend'</b> is defined and quantified as 3 aspects: long-term, short-term and persistence. <i>Long-term</i> condition is satisfied when the interest increased when compared to the interest level of the previous year. <i>Short-term</i> condition is met when the interest increased for the past 2 weeks. Lastly, <i>persistence</i> condition is satisfied when the upward trend continues within the target period (1 week). If all 3 conditions are met, we call the term is a <b>'trend'</b> term. <br>
+<br>
 To understand the current trend, we employed a powerful time-series technique <b>STL</b> (Seasonal and Trend decomposition using Loess) and <b>MA</b> (Moving Average). To predict the future trend, we used <b>LSTM</b> (Long-Short Term Memory).
 
 
